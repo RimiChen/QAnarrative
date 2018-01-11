@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<!--Title-->
+<title>REWRITE</title>
+
+<!-- hiden input file loader -->
+<input type="file" id="fileLoader" name="files" title="Load File" />
+<!-- css files -->
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="{{url_for('static',filename='./css/bookshelf.css')}}">
+
+<!-- script files -->
+	<!-- settings -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+<script src="{{url_for('static',filename='data_structures.js')}}"></script>
+<script src="{{url_for('static',filename='bookshelf_variables.js')}}"></script>
+
+	<!-- functions -->
+<script src="{{url_for('static',filename='shared_methods.js')}}"></script>
+<script src="{{url_for('static',filename='image_source.js')}}"></script>	 	    
+<script src="{{url_for('static',filename='bookshelf_functions.js')}}"></script>	
+
+
+</head>
+
+
+<body onload = "bookshelf_functions.initialize_frames()">
+
+<div id="main_frame">
+	<div id="bookshelf_function_menu">
+        <div class ="bookshelf_function_button" id ="bs_add_story"></div>
+        <div class ="bookshelf_function_button" id ="bs_delete_story"></div>
+    </div>
+	<div id="bookshelf">
+		<!-- insert book shelfs-->
+		<div id="bookshelf_overlay"></div>
+		
+	</div>
+</div>
+
+</body>
+
+</html>
